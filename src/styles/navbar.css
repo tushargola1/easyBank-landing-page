@@ -1,0 +1,98 @@
+nav {
+    background-color: var(--White);
+    padding: 2.2vw 7vw;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.links a {
+    margin: 0 1.5vw;
+    color: var(--GrayishBlue);
+    position: relative;
+
+}
+
+.links a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    
+    bottom: -4px; 
+    width: 100%;
+    height: 3px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(58%, rgba(49, 211, 92, 1)), to(rgba(43, 183, 218, 1)));
+    background: -o-linear-gradient(left, rgba(49, 211, 92, 1) 58%, rgba(43, 183, 218, 1) 100%);
+    background: linear-gradient(90deg, rgba(49, 211, 92, 1) 58%, rgba(43, 183, 218, 1) 100%);
+    
+}
+
+
+
+
+.hamburger {
+    display: none;
+}
+
+
+
+@media screen and (max-width : 768px) {
+  
+    nav {
+
+        padding:5vw 7vw;
+        
+    }
+
+    .hamburger {
+        display: block;
+        
+    }
+
+    .links{
+        display: none;
+    }
+
+    .links a:hover::after {
+        background: none;
+    }
+    .show {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        text-align: center;
+        position: absolute;
+        top: 10vw;
+        left: 0;
+        right: 0;
+        background-color: var(--White);
+        /* background-color: red; */
+        z-index: 999;
+        margin: 4vw 7vw;
+        padding: 2vw 0;
+        gap: 5vw;
+        border-radius: 2vw;
+        color: var(--DarkBlue); /* Assuming you have defined --DarkBlue */
+        font-weight: var( --font-w700);
+        text-decoration: none;
+    }
+
+   
+ 
+  
+}
+
+@media screen and (max-width: 430px) {
+    .show{
+        top:15vw;
+        
+    }
+    
+}
